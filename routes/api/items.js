@@ -7,7 +7,7 @@ const { Item } = require('../../models/Item');
 // GET
 router.get('/', (req, res) => {
   Item.find()
-    .sort({ date: -1 })
+    .sort({ date: 1 })
     .then(items => res.send(items))
     .catch(err => res.status(400).send(err));
 });
