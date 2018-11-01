@@ -5,7 +5,7 @@ const path = require('path');
 
 const items = require('./routes/api/items');
 
-const db = 'mongodb://localhost:27017/ShoppingList';
+const db = process.env.MONGODB_URI || 'mongodb://localhost:27017/ShoppingList';
 const app = express();
 
 app.use(bodyParser.json());
